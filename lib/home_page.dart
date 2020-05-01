@@ -13,7 +13,9 @@ class HomePage extends StatelessWidget {
   }
 
   _body() {
-    return Container(color: Colors.yellow[100],
-                    margin: Egdes);
+    return Container(
+      color: Colors.yellow[100],
+      margin: EdgeInsets.all(16),
+    );
   }
 }
