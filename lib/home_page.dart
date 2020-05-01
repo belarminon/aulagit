@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import 'package:teste_contador/01_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -8,14 +10,29 @@ class HomePage extends StatelessWidget {
         title: Text('Brincando aqui gostoso'),
         centerTitle: true,
       ),
-      body: _body(),
+      body: _body(context),
     );
   }
 
-  _body() {
+  _body(BuildContext context) {
     return Container(
       color: Colors.yellow[100],
       margin: EdgeInsets.all(16),
+      child: Column(
+        children: [
+          RaisedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => OnePage(),
+                ),
+              );
+            },
+            child: Text('Outra pagina'),
+          )
+        ],
+      ),
     );
   }
 }
